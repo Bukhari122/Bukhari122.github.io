@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rayyan Bukhari | Portfolio</title>
+<meta name="description" content="Student building software and electronics projects. Looking for a co-op term in 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* ===== EDIT COLOURS HERE ===== */
+  :root {
+    --bg: #eef1f4;
+    --ink: #05469a;
+    --muted: #55616f;
+    --line: #c5ced8;
+    --accent: #0f6b4f;
+    --tag: #dce5ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1512; --ink: #e3ece7; --muted: #92a39a;
+      --line: #2a3a33; --accent: #5ed6a3; --tag: #1a2620;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1512; --ink: #e3ece7; --muted: #92a39a;
+    --line: #2a3a33; --accent: #5ed6a3; --tag: #1a2620;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 1.0625rem/1.65 "Source Sans 3", system-ui, sans-serif;
+  }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  header { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  nav a { margin-right: 1.25rem; color: var(--ink); text-decoration: none; font-weight: 600; }
+  nav a:hover { color: var(--accent); }
+  #theme {
+    background: none; color: var(--ink); border: 1px solid var(--line);
+    border-radius: 6px; padding: .35rem .75rem; font: inherit; cursor: pointer;
+  }
+
+  h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.15; margin: 0; }
+  .hero { padding: 4.5rem 0 3rem; }
+  h1 { font-size: clamp(2.4rem, 7vw, 3.8rem); font-weight: 700; letter-spacing: -0.02em; }
+  .hero p { max-width: 36rem; color: var(--muted); font-size: 1.2rem; margin: 1.25rem 0 1.75rem; }
+  .links a { margin-right: 1.25rem; font-weight: 600; }
+
+  section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.7rem; margin-bottom: 1.5rem; }
+
+  /* Projects: a vertical "trace" line down the left side */
+  .project { border-left: 3px solid var(--accent); padding: .1rem 0 .1rem 1.25rem; margin-bottom: 2rem; }
+  .project h3 { font-size: 1.3rem; }
+  .project p { margin: .5rem 0; }
+  .tags { list-style: none; padding: 0; margin: .75rem 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tags li { background: var(--tag); border-radius: 4px; padding: .1rem .55rem; font-size: .9rem; }
+  .learned { color: var(--muted); }
+  .project img { max-width: 100%; border-radius: 6px; border: 1px solid var(--line); margin-top: .5rem; }
+
+  .skills dt { font-weight: 600; margin-top: .75rem; }
+  .skills dd { margin: 0; color: var(--muted); }
+
+  footer { padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" type="button" aria-label="Switch light or dark theme">Theme</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <!-- EDIT: your name and a one-sentence intro -->
+    <h1>Hi, I'm Rayyan Bukhari.</h1>
+    <p>I'm a Computer Engineering student at Toronto Metropoltian University who builds software and electronics projects. I'm looking for a software / electrical co-op for Winter / Summer 2027.</p>
+    <div class="links">
+      <a href="https://github.com/Bukhari122" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rayyan-bukhari-758199220/" target="_blank">LinkedIn</a>
+      <a href="resume.pdf">Resume (PDF)</a>
+    </div>
+  </div>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+
+    <article class="project">
+      <h3>Bookstore Desktop Application</h3>
+      <p>Java based bookstore application that allows users to interact with a collection of books and common online bookstore applications.</p>
+      <ul class="tags"><li>Java</li><li>OOP</li><li>UML</li></ul>
+      <p class="learned">One of the main things I learned from this project was to work effetivley in a team and allocat responsiblites to diffrent team members and coming together to form a finished product. It also taught me about OOP fundemntals such as Encapulsation and Inheritance  .</p>
+      <p><a href="https://github.com/Bukhari122/BookStoreApp" target="_blank">Code</a>| 
+      
+    </article>
+
+    <article class="project">
+      <h3>RISC Processor</h3>
+      <p>RISC/MIPS based CPU .</p>
+      <ul class="tags"><li>VHDL</li><li>Quartus</li></ul>
+      <p class="learned">This project taught me about CPU architecture and showed me how various components like the registers or ALU work together.</p>
+      <p><a href="https://github.com/Bukhari122/RISC_Processor" target="_blank">View Code</a>
+    </article>
+
+    <article class="project">
+      <h3>Amplifer Circuit Design Lab</h3>
+      <p>Designed and analyzed amplifer cirucits as part of a electronics laboratory  project. </p>
+      <ul class="tags"><li>C</li><li>Circuit design</li></ul>
+      <p class="learned">Tested circuit behviour and measured parameters such as voltage gain, amplifier gain, and frequency response.</p>
+      <p>
+    </article>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <dl>
+      <dt>Languages</dt><dd>Python, Java, JS, C/C++</dd>
+      <dt>Hardware</dt><dd>Arduino,HC12 Assembly,VHDL, Quartus </dd>
+      <dt>Tools</dt><dd>Git, GitHub, VS Code, MATLAB, Linux</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>The best way to reach me is <a href="mailto:rbukhari456@gmail.com">rbukhari456@gmail.com</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Your Name</div>
+</footer>
+
+<script>
+  // Remembers the theme choice; works even if storage is blocked
+  const root = document.documentElement;
+  try {
+    const saved = localStorage.getItem("theme");
+    if (saved) root.dataset.theme = saved;
+  } catch (e) {}
+  document.getElementById("theme").addEventListener("click", () => {
+    const dark = root.dataset.theme
+      ? root.dataset.theme === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  });
+</script>
+</body>
+</html>
